@@ -1,0 +1,50 @@
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #ffe6f0;
+  margin-top: 100px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* falling hearts */
+.heart {
+  position: fixed;
+  top: -20px;
+  font-size: 20px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* trail dots */
+.trail {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: pink;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  animation: fade 0.5s linear forwards;
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
